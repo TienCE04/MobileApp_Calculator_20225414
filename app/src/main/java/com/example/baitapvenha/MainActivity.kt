@@ -127,7 +127,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
         }
-
         if (binding.ketqua.text.toString() == "0") {
             if (value in "1".."9") {
                binding.ketqua.text=value
@@ -165,12 +164,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             for(i in 0..chuoi.length-3){
                 result_end+=chuoi[i]
             }
+
             binding.viewHint.text=binding.ketqua.text.toString()
             binding.ketqua.text=result_end
         }
         else{
-            binding.viewHint.text=binding.ketqua.text.toString()
             binding.ketqua.text=chuoi
+            binding.viewHint.text=chuoi
         }
     }
 
